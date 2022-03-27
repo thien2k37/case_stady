@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style_login.css">
+  <script src="js.js"></script>
+</head>
+<body>
+<div action="#" method="post" class="form">
+  <div class="img_container">
+    <img src="avatar/yasuo.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Tên Đăng Nhập</b></label>
+    <input type="text" placeholder="Nhập tên đăng nhập" name="uname" required id="username">
+
+    <label><b>Mât Khẩu</b></label>
+    <input type="password" placeholder="Nhập mật khẩu" name="psw" required id="password">
+
+    <button onclick="btn_login()">Đăng Nhập</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <h4 id="hien"></h4>
+    <a type="button" class="cancel_btn" >Thoát</a>
+    <span><button onclick="dk()">Đăng Ký</button></span>
+  </div>
+</div>
+<script>
+  function dk() {
+    window.location = "register.html";
+  }
+
+  function btn_login() {
+    arr = JSON.parse(window.localStorage.getItem('user'));
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].username == user && arr[i].password == pass) {
+        window.location="index.html";
+      } else {
+        document.getElementById("hien").innerHTML = "Tên hoặc mật khẩu không đúng";
+      }
+    }
+  }
+</script>
+</body>
+</html>

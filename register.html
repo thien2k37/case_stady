@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style_register.css">
+    <script src="js.js"></script>
+</head>
+
+<body>
+<div action="#" class="form">
+    <div class="container">
+        <h1>Đăng Ký</h1>
+        <p>Nhập đầy đủ thông tin</p>
+        <hr>
+
+        <label ><b>Tên Đăng Nhập:</b></label>
+        <input type="text" placeholder="Nhập tên đăng nhập" name="" id="name_login" required>
+
+        <label ><b>Mật Khẩu:</b></label>
+        <input type="password" placeholder="Nhập mật khẩu" name="psw" id="password" required>
+        <label ><b>Nhập lại mật khẩu:</b></label>
+        <input type="password" placeholder="Nhập lại mật khẩu" name="psw-pass_two" id="pass_two" required>
+        <hr>
+
+        <h3 id="not_dk"></h3>
+        <button onclick="register()">Đăng ký</button>
+        <p class="container signin">
+        <p>Bạn đã có tài khoản <a href="login.html">Đăng Nhập</a>.</p>
+        </p>
+    </div>
+<script>
+    function register() {
+        let user = document.getElementById("name_login").value;
+        let pass = document.getElementById("password").value;
+        let pass_two = document.getElementById("pass_two").value;
+        let acc = new Ac(user, pass);
+        if (pass === pass_two) {
+            if (user === "") {
+                document.getElementById("not_dk").innerHTML = " username không đc để  trống";
+            } else {
+                let trung = false;
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i].username == user) {
+                        document.getElementById("not_dk").innerHTML = "Trùng tên đăng nhập";
+                        trung = true
+                        break;
+                    }
+                }
+                if (trung == false) {
+                    arr.push(acc);
+                    localStorage.setItem('user', JSON.stringify(arr));
+                    window.location.href = "login.html";
+                }
+
+            }
+        } else {
+            document.getElementById("not_dk").innerHTML = "Mật khẩu không khớp";
+        }
+    }
+</script>
+</div>
+</body>
+</html>
