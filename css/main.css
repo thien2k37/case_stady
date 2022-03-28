@@ -15,6 +15,9 @@ html {
     height: 46px;
     background-color: darkolivegreen;
 }
+#nav_header {
+    display: inline-block;
+}
 #nav_header li {
     display: inline-block;
 }
@@ -34,6 +37,25 @@ html {
 #cxt {
     padding-left: 5px;
 }
+
+.header .nav_kanban {
+    float: right;
+}
+
+.header .nav_kanban_display a{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    padding: 0 21px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#kanban_nav:hover  {
+    color: yellow;
+    text-transform: uppercase;
+}
+
+
 .kanban {
     display: flex;
     padding: 30px;

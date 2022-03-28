@@ -9,7 +9,7 @@ html {
 
 .main_home {
     height: 46px;
-    background-color: darkolivegreen;
+    background-color: darkblue;
 }
 
 #nav_home {
@@ -19,10 +19,6 @@ html {
 #nav_home > li {
     display: inline-block;
 }
-#nav_home li {
-    position: relative;
-}
-
 
 #nav_home li a {
     color: #fff;
@@ -57,5 +53,14 @@ html {
 
 #slider {
     padding: 50%;
-    background-color: #04AA6D;
+    background: url("/avatar/cg1.png") top no-repeat;
+    background-size: 100%;
+}
+.text-content {
+    position: absolute;
+    margin: -600px;
+    color: #ffffff;
+}
+.text {
+    margin-top: 10px;
 }
