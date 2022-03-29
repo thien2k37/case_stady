@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div action="#" class="form">
+<div action="login.html" method="get" class="form" >
     <div class="container">
         <h1>Đăng Ký</h1>
         <p>Nhập đầy đủ thông tin</p>
@@ -29,36 +29,37 @@
         <p>Bạn đã có tài khoản <a href="login.html">Đăng Nhập</a>.</p>
         </p>
     </div>
-<script>
-    function register() {
-        let user = document.getElementById("name_login").value;
-        let pass = document.getElementById("password").value;
-        let pass_two = document.getElementById("pass_two").value;
-        let acc = new Ac(user, pass);
-        if (pass === pass_two) {
-            if (user === "") {
-                document.getElementById("not_dk").innerHTML = " username không đc để  trống";
-            } else {
-                let trung = false;
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i].username == user) {
-                        document.getElementById("not_dk").innerHTML = "Trùng tên đăng nhập";
-                        trung = true
-                        break;
+    <script>
+        function register() {
+            let user = document.getElementById("name_login").value;
+            let pass = document.getElementById("password").value;
+            let pass_two = document.getElementById("pass_two").value;
+            let acc = new Ac(user, pass);
+            if (pass === pass_two) {
+                if (user === "") {
+                    document.getElementById("not_dk").innerHTML = " Tên đăng nhập không đc để  trống";
+                } else {
+                    let trung = false;
+                    for (let i = 0; i < arr.length; i++) {
+                        if (arr[i].username == user) {
+                            document.getElementById("not_dk").innerHTML = "Trùng tên đăng nhập";
+                            trung = true
+                            break;
+                        }
                     }
-                }
-                if (trung == false) {
-                    arr.push(acc);
-                    localStorage.setItem('user', JSON.stringify(arr));
-                    window.location.href = "login.html";
-                }
+                    if (trung == false) {
+                        arr.push(acc);
+                        localStorage.setItem('user', JSON.stringify(arr));
+                        alert("Đăng Ký Thành công!")
+                        window.location.href = "login.html";
+                    }
 
+                }
+            } else {
+                document.getElementById("not_dk").innerHTML = "Mật khẩu không khớp";
             }
-        } else {
-            document.getElementById("not_dk").innerHTML = "Mật khẩu không khớp";
         }
-    }
-</script>
+    </script>
 </div>
 </body>
 </html>

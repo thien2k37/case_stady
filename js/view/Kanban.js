@@ -1,6 +1,8 @@
 import Column from "./Column.js";
 
 export default class Kanban {
+    static user;
+
     constructor(root) {
         this.root = root;
 

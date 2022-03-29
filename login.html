@@ -40,7 +40,9 @@
     let pass = document.getElementById("password").value;
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].username == user && arr[i].password == pass) {
-        window.location="index.html";
+        alert("Đăng Nhập KanBan thành công !")
+        window.location="kanban.html";
+
       } else {
         document.getElementById("hien").innerHTML = "Tên hoặc mật khẩu không đúng";
       }
