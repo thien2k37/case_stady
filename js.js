@@ -7,5 +7,5 @@ class Ac {
         this.password = pass;
     }
 }
-
-let arr = JSON.parse(localStorage.getItem('user'));
+let arr = [];
+arr = JSON.parse(localStorage.getItem('user'));
