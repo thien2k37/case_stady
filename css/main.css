@@ -7,13 +7,13 @@ html {
     font-family: sans-serif;
 }
 .header_father {
-    background-image: url("../avatar/yasuo.jpg");
+    background-image: url("../avatar/anivia.jpg");
     background-size: 100%;
 }
 
 .header {
     height: 46px;
-    background-color: darkolivegreen;
+    background-color:  darkblue;
 }
 #nav_header {
     display: inline-block;
@@ -60,7 +60,6 @@ html {
     display: flex;
     padding: 30px;
     width: 750px;
-    background: darkcyan;
     border-radius: 5px;
 }
 
@@ -98,7 +97,7 @@ html {
 
 .kanban__dropzone--active {
     height: 20px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(56, 39, 176, 0.57);
 }
 
 .kanban__add-item {
@@ -106,7 +105,7 @@ html {
     padding: 10px 0;
     font-size: 16px;
     color: white;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(56, 39, 176, 0.57);
     border: none;
     border-radius: 5px;
     cursor: pointer;

@@ -30,7 +30,7 @@ export default class Item {
 
         this.elements.input.addEventListener("blur", onBlur);
         this.elements.root.addEventListener("dblclick", () => {
-            const check = confirm("Bạn muốn cấn lee sin của anh sơn ko?");
+            const check = confirm("Bạn muốn xóa ko?");
 
             if (check) {
                 KanbanAPI.deleteItem(id);
